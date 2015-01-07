@@ -44,6 +44,21 @@
 	user-select: none;
 }
 
+.button__text-light{
+	display: block;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	z-index: 100;
+	font-size: 1.5em;
+	color: #212121;
+	font-weight: bold;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;}
 .morph-shape {
 	position: absolute;
 	width: 100%;
@@ -57,6 +72,27 @@
 	stroke: #fff;
 	stroke-width: 4px;
 	stroke-linecap: round;
+	-webkit-transition: box-shadow 0.2s;
+	-moz-transition: box-shadow 0.2s;
+	transition: box-shadow 0.2s;
+}
+
+.button--line:after .morph-shape svg {
+	top: 0;
+	left: 0;
+	padding: 0;
+	box-shadow: 0 0 0 3px #fff;
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	transition: transform 0.2s, opacity 0.2s;
+}
+
+.button--line:hover:after .morph-shape svg {
+	-webkit-transform: scale(0.85);
+	-moz-transform: scale(0.85);
+	-ms-transform: scale(0.85);
+	transform: scale(0.85);
+	opacity: 0.5;
 }
 
 .button--line:hover .morph-shape svg {
@@ -66,9 +102,15 @@
 	-ms-transform: scale(0.85);
 	transform: scale(0.85);
 	transition: all 100ms ease-in-out;
+	box-shadow: 0 0 0 10px rgba(255,255,255,0.4);
+	color: #fff;
 }
 
 .button--line:nth-child(2) .morph-shape svg {
+	fill: #455A64;
+}
+
+.button--line:nth-child(2):hover .morph-shape svg {
 	fill: #03A9F4;
 }
 
@@ -76,22 +118,23 @@
 	fill: #607D8B;
 }
 
+.button--fill:hover .morph-shape svg {
+	fill: #03A9F4;
+}
+
 .button--fill:nth-child(4) .morph-shape svg {
-	fill: #455A64;
+	fill: #CFD8DC;
+	color: #212121;
+}
+
+.button--fill:nth-child(4):hover .morph-shape svg {
+	fill: #03A9F4;
 }
 
 .button--round .morph-shape svg {
 	stroke-width: 7px;
-}
-
-/* Example for effect */
-
-.button--anim-1 .button__text {
-	-webkit-transition: -webkit-transform 0.15s;
-	transition: transform 0.15s;
-}
-
-.button--anim-1:active .button__text {
-	-webkit-transform: translate3d(0, -5px, 0);
-	transform: translate3d(0, -5px, 0);
+	border-radius: 50%;
+	-webkit-transition: box-shadow 0.2s;
+	-moz-transition: box-shadow 0.2s;
+	transition: box-shadow 0.2s;
 }
