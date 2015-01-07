@@ -16,3 +16,20 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
+
+body {
+	color: #fff;
+	background: #212121;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+.container {
+	text-align: center;
+	padding: 5.25em 0.5em 0;
+}
+
+.ease-all {
+	transition: all 1s ease-in-out;
+}
