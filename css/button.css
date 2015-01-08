@@ -58,7 +58,9 @@
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;}
+	user-select: none;
+}
+
 .morph-shape {
 	position: absolute;
 	width: 100%;
@@ -118,8 +120,36 @@
 	fill: #607D8B;
 }
 
+.button--fill:after .morph-shape svg {
+	top: 0;
+	left: 0;
+	padding: 0;
+	box-shadow: 0 0 0 3px #fff;
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	transition: transform 0.2s, opacity 0.2s;
+}
+
+.button--fill:hover:after .morph-shape svg {
+	fill: #03A9F4;
+	-webkit-transform: scale(0.85);
+	-moz-transform: scale(0.85);
+	-ms-transform: scale(0.85);
+	transform: scale(0.85);
+	transition: all 100ms ease-in-out;
+	box-shadow: 0 0 0 10px rgba(255,255,255,0.4);
+	color: #fff;
+}
+
 .button--fill:hover .morph-shape svg {
 	fill: #03A9F4;
+	-webkit-transform: scale(0.85);
+	-moz-transform: scale(0.85);
+	-ms-transform: scale(0.85);
+	transform: scale(0.85);
+	transition: all 100ms ease-in-out;
+	box-shadow: 0 0 0 10px rgba(255,255,255,0.4);
+	color: #fff;
 }
 
 .button--fill:nth-child(4) .morph-shape svg {
